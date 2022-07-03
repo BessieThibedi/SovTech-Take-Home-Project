@@ -1,5 +1,11 @@
 package MainTest;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
@@ -55,10 +61,11 @@ public class Main extends Constants {
 		contactUs.setMessageClear();
 		contactUs.setMessage(ExcelUtils.getCellData(i, 5));
 		contactUs.setConsentbtn();
+		captureScreenShot(driver, "Contact Page - form");
 		contactUs.setSubmitbtn();
 		
 		
-		
+		captureScreenShot(driver, "Contact Page - Positive Results");
 		//driver.switchTo().frame(0);
 		
 		
@@ -85,7 +92,7 @@ public class Main extends Constants {
 		  }
 	}
 	
-	@Test (enabled = false)
+	@Test 
 	public void NegativeScenario() throws Exception {
 		
 		ExcelUtils.setExcelFile(Constants.excelLocation + Constants.excelFilename,Constants.excelSheetname2);
@@ -110,6 +117,7 @@ public class Main extends Constants {
 		contactUs.setMessageClear();
 		contactUs.setMessage(ExcelUtils.getCellData(i, 5));
 		contactUs.setConsentbtn();
+		captureScreenShot(driver, "Contact Page - Positive Results");
 		contactUs.setSubmitbtn();
 		
 		//driver.switchTo().frame(0);
@@ -126,6 +134,7 @@ public class Main extends Constants {
 		  
 	
 		  }	
+		  captureScreenShot(driver, "Contact Page - Positive Results");
 		
 		contactUs.clickUsingJavaScriptExecutor();
 		  }
@@ -137,4 +146,15 @@ public class Main extends Constants {
 	}
 	
 
-}
+
+
+public void captureScreenShot(WebDriver driver, String Name) throws IOException {
+	
+	TakesScreenshot ts = (TakesScreenshot)driver;
+	File src=ts.getScreenshotAs(OutputType.FILE);
+	File dest = new File("./"+"/Screenshots/"+ Name +".png");
+	FileUtils.copyFile(src, dest);
+	
+	
+	
+}}
