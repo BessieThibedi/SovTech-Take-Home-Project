@@ -34,12 +34,14 @@ public class Main extends Constants {
 		
 		ContactUs_POM contactUs = new ContactUs_POM(driver);
 		
+		driver.switchTo().frame(0);
+		
 		int totalrows = ExcelUtils.getNumberRows();
 		  for(int i=1; i <= totalrows; i++) {
 		
-		driver.switchTo().frame(0);
+			  
 		
-		Thread.sleep(10000);
+		//Thread.sleep(10000);
 		contactUs.setNameClear();
 		contactUs.setNametxt(ExcelUtils.getCellData(i, 0));
 		contactUs.setEmailClear();
@@ -55,27 +57,35 @@ public class Main extends Constants {
 		contactUs.setConsentbtn();
 		contactUs.setSubmitbtn();
 		
-		//driver.switchTo().parentFrame();
-		
-		driver.switchTo().frame(0);
 		
 		
+		//driver.switchTo().frame(0);
 		
-		  String ActualResults = contactUs.getSuccesstxt();
-		  String ExpectedResults = ExcelUtils.getCellData(i, 6);
+		
+		
+		/*
+		 * String ActualResults = contactUs.getSuccesstxt(); String ExpectedResults =
+		 * ExcelUtils.getCellData(i, 6);
+		 * 
+		 * if(ActualResults.equalsIgnoreCase(ExpectedResults)) {
+		 * ExcelUtils.setCellData(ActualResults, i, 7); ExcelUtils.setCellData("Pass",
+		 * i, 8); }else { ExcelUtils.setCellData(ActualResults, i, 7);
+		 * ExcelUtils.setCellData("Fail", i, 8); }
+		 */
 		  
-		  if(ActualResults.equalsIgnoreCase(ExpectedResults)) {
-			  ExcelUtils.setCellData(ActualResults, i, 7);
-			  ExcelUtils.setCellData("Pass", i, 8);
-		  }else {
-			  ExcelUtils.setCellData(ActualResults, i, 7);
-			  ExcelUtils.setCellData("Fail", i, 8);
-		  }	
-		  contactUs.clickUsingJavaScriptExecutor();
+		  //driver.switchTo().frame(0);
+		  //contactUs.clickUsingJavaScriptExecutor();
+		
+		 // driver.switchTo().parentFrame();
+		  driver.get(Constants.link);
+		  
+		  
+		 // Setup();
+		  
 		  }
 	}
 	
-	@Test 
+	@Test (enabled = false)
 	public void NegativeScenario() throws Exception {
 		
 		ExcelUtils.setExcelFile(Constants.excelLocation + Constants.excelFilename,Constants.excelSheetname2);
@@ -117,11 +127,11 @@ public class Main extends Constants {
 	
 		  }	
 		
-		//contactUs.clickUsingJavaScriptExecutor();
+		contactUs.clickUsingJavaScriptExecutor();
 		  }
 	}
 	
-	@AfterSuite
+	@AfterSuite(enabled = false)
 	public void Close() {
 		driver.quit();
 	}

@@ -1,14 +1,19 @@
 package Methods;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ContactUs_POM {
 	
 WebDriver driver;
+
 	
 	By Nametxt = By.id("your_name-c2e387f9-4bd8-496f-ab2a-81fbbc31712a");
 	By Emailtxt = By.id("email-c2e387f9-4bd8-496f-ab2a-81fbbc31712a");
@@ -24,9 +29,18 @@ WebDriver driver;
 	
 	public ContactUs_POM(WebDriver driver) {
 		this.driver=driver;
+		
 	}
 	
+	
+	
 	public void setNameClear() {
+		
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30000));
+		
+		WebElement nametxtt = wait.until(ExpectedConditions.visibilityOfElementLocated(Nametxt));
+		
 		driver.findElement(Nametxt).clear();
 		}
 	
@@ -63,6 +77,10 @@ WebDriver driver;
 		driver.findElement(Consentbtn).click();
 	}
 	public void setSubmitbtn() {
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		
+		WebElement submitbttn = wait.until(ExpectedConditions.visibilityOfElementLocated(Submitbtn));
 		driver.findElement(Submitbtn).click();
 	}
 	public void setContactUsbtn() {
@@ -73,6 +91,12 @@ WebDriver driver;
 	}
 	
 	public void clickUsingJavaScriptExecutor() {
+		
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		
+		WebElement contactus = wait.until(ExpectedConditions.visibilityOfElementLocated(ContactUsMenubtn));
+		
 		//create javascript executor
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		WebElement pc = driver.findElement(ContactUsMenubtn);

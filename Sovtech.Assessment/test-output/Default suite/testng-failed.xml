@@ -5,7 +5,7 @@
     <classes>
       <class name="MainTest.Main">
         <methods>
-          <include name="NegativeScenario"/>
+          <include name="ContactUsPage"/>
           <include name="Setup"/>
           <include name="Close"/>
         </methods>

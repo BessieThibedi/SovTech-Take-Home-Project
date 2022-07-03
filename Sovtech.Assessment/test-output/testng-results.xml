@@ -2,38 +2,38 @@
 <testng-results skipped="0" failed="1" ignored="1" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38438" started-at="2022-06-23T14:59:33 CAT" finished-at="2022-06-23T15:00:11 CAT">
+  <suite name="Suite" duration-ms="21188" started-at="2022-07-03T11:52:28 CAT" finished-at="2022-07-03T11:52:49 CAT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38438" started-at="2022-06-23T14:59:33 CAT" finished-at="2022-06-23T15:00:11 CAT">
+    <test name="Test" duration-ms="21188" started-at="2022-07-03T11:52:28 CAT" finished-at="2022-07-03T11:52:49 CAT">
       <class name="MainTest.Main">
-        <test-method status="PASS" signature="Setup()[pri:0, instance:MainTest.Main@545997b1]" name="Setup" is-config="true" duration-ms="23881" started-at="2022-06-23T14:59:33 CAT" finished-at="2022-06-23T14:59:57 CAT">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:MainTest.Main@545997b1]" name="Setup" is-config="true" duration-ms="15929" started-at="2022-07-03T11:52:28 CAT" finished-at="2022-07-03T11:52:44 CAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="FAIL" signature="NegativeScenario()[pri:0, instance:MainTest.Main@545997b1]" name="NegativeScenario" duration-ms="14470" started-at="2022-06-23T14:59:57 CAT" finished-at="2022-06-23T15:00:11 CAT">
+        <test-method status="FAIL" signature="ContactUsPage()[pri:0, instance:MainTest.Main@545997b1]" name="ContactUsPage" duration-ms="5122" started-at="2022-07-03T11:52:44 CAT" finished-at="2022-07-03T11:52:49 CAT">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[unknown error: cannot determine loading status
 from unknown error: unexpected command response
-  (Session info: chrome=103.0.5060.53)
+  (Session info: chrome=103.0.5060.66)
 Build info: version: '4.2.2', revision: '683ccb65d6'
-System info: host: 'NTINLTP2001474', ip: '10.78.45.232', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
+System info: host: 'NTINLTP2001474', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [94f132dd4a29b6f919829e37c3535ad7, findElement {using=id, value=email-c2e387f9-4bd8-496f-ab2a-81fbbc31712a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Bessie\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53657}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53657/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 94f132dd4a29b6f919829e37c3535ad7]]>
+Command: [d38feca85733801d1a584ca69aac4205, get {url=https://www.sovtech.co.za/contact-us/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Bessie\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59936}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59936/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d38feca85733801d1a584ca69aac4205]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
 from unknown error: unexpected command response
-  (Session info: chrome=103.0.5060.53)
+  (Session info: chrome=103.0.5060.66)
 Build info: version: '4.2.2', revision: '683ccb65d6'
-System info: host: 'NTINLTP2001474', ip: '10.78.45.232', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
+System info: host: 'NTINLTP2001474', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [94f132dd4a29b6f919829e37c3535ad7, findElement {using=id, value=email-c2e387f9-4bd8-496f-ab2a-81fbbc31712a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Bessie\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53657}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53657/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 94f132dd4a29b6f919829e37c3535ad7
+Command: [d38feca85733801d1a584ca69aac4205, get {url=https://www.sovtech.co.za/contact-us/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Bessie\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59936}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59936/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d38feca85733801d1a584ca69aac4205
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -45,12 +45,8 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:588)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:406)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:398)
-at Methods.ContactUs_POM.setEmailClear(ContactUs_POM.java:37)
-at MainTest.Main.NegativeScenario(Main.java:92)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:351)
+at MainTest.Main.ContactUsPage(Main.java:80)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -84,12 +80,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NegativeScenario -->
-        <test-method status="PASS" signature="Close()[pri:0, instance:MainTest.Main@545997b1]" name="Close" is-config="true" duration-ms="6782" started-at="2022-06-23T15:00:11 CAT" finished-at="2022-06-23T15:00:18 CAT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Close -->
+        </test-method> <!-- ContactUsPage -->
       </class> <!-- MainTest.Main -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
